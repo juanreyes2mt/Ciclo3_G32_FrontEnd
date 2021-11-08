@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>G32_Reto 3</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/Reservation.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="estilos.css" as="style">
+    <link href="estilos.css" rel="stylesheet">
+    <script type="text/javascript"> window.onload = autoInicioBicicleta(); </script>
+    <script type="text/javascript"> window.onload = autoInicioCliente(); </script>
+</head>
+<body>
+    
+
+<div class="nav-bg">
+    <nav class="navegacion-principal contenedor">
+        <a href="index.html">Inicio</a>
+        <a href="category.html">Categorias</a>
+        <a href="bikes.html">Bicicletas</a>
+        <a href="client.html">Clientes</a>
+        <a href="message.html">Mensajes</a>
+        <a href="reservation.html">Reservas</a>
+    </nav>
+</div>
+
+<h1>Operaciones CRUD on Reservation</h1>
+
+<section>
+    <div>
+        <input type="number" id="id" placeholder="ID">
+        <input type="date" id="startDate" placeholder="START DATE">
+        <input type="date" id="devolutionDate" placeholder="DEVOLUTION DATE">
+        <select class="lista" id="status">
+            <option value="created">Created</option>
+            <option value="completed">Completed</option>
+            <option value="Programed">Programed</option>
+        </select>
+        <select class="lista" id="select-bike" placeholder="SELECT CATEGORY"></select>
+        <select class="lista" id="select-client" placeholder="SELECT CLIENT"></select>
+    </div>
+    <div>
+        <button class="boton" onclick="consultarReservas()">Consultar</button>
+        <button class="boton" onclick="guardarReserva()">Guardar</button>
+        <button class="boton" onclick="editarReserva()">Actualizar</button>
+        <button class="boton" onclick="eliminarReserva()">Eliminar</button>
+    </div>
+    <div class="operaciones" id="resultado"></div>
+</section>
+
+<section>
+    <div>
+        <h1>Para las operaciones de actualizar o eliminar, debe ingresar el ID del registro.</h1>
+      </div>
+</section>
+
+<section>
+    <h1 class="nav-bg"> Reportes de Reservas</h1>
+    <div class="reportes">
+        <button class="boton" onclick="traerReporteStatus()"> Generar Reporte Status Reservas </button>
+        <div id="resultadoStatus"></div>
+   
+        <button class="boton" onclick="traerReporteClientes()"> Generar Reporte Clientes y Cantidad de reservas por cliente </button>
+        <div id="resultadoClientes"></div>
+    </div>
+</section>
+
+</body>
+
+
+</html>

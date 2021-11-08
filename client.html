@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>G32_Reto 3</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/Client.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="estilos.css" as="style">
+    <link href="estilos.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="nav-bg">
+    <nav class="navegacion-principal contenedor">
+        <a href="index.html">Inicio</a>
+        <a href="category.html">Categorias</a>
+        <a href="bikes.html">Bicicletas</a>
+        <a href="client.html">Clientes</a>
+        <a href="message.html">Mensajes</a>
+        <a href="reservation.html">Reservas</a>
+    </nav>
+</div>
+
+<h1>Operaciones CRUD on Client</h1>
+
+<section>
+    <div>
+        <input type="number" id="idClient" placeholder="ID">
+        <input type="text" id="name" placeholder="NAME">
+        <input type="text" id="email" placeholder="E-MAIL">
+        <input type="number" id="age" placeholder="AGE">
+        <input type="text" id="password" placeholder="PASSWORD">
+    </div>
+    <div>
+        <button class="boton" onclick="consultarClientes()">Consultar</button>
+        <button class="boton" onclick="guardarCliente()">Guardar</button>
+        <button class="boton" onclick="editarCliente()">Actualizar</button>
+        <button class="boton" onclick="eliminarCliente()">Eliminar</button>
+    </div>
+    <div class="operaciones" id="resultado"></div>
+</section>
+
+<section>
+    <div>
+        <h1>Para las operaciones de actualizar o eliminar, debe ingresar el ID del registro.</h1>
+      </div>
+</section>
+
+</body>
+
+
+</html>

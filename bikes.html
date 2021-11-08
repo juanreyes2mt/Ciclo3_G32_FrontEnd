@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>G32_Reto 3</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/Bike.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="estilos.css" as="style">
+    <link href="estilos.css" rel="stylesheet">
+    <script type="text/javascript"> window.onload = autoInicioCategoria(); </script>
+</head>
+<body>
+
+<div class="nav-bg">
+    <nav class="navegacion-principal contenedor">
+        <a href="index.html">Inicio</a>
+        <a href="category.html">Categorias</a>
+        <a href="bikes.html">Bicicletas</a>
+        <a href="client.html">Clientes</a>
+        <a href="message.html">Mensajes</a>
+        <a href="reservation.html">Reservas</a>
+    </nav>
+</div>
+
+<h1>Operaciones CRUD on Bike</h1>
+
+<section>
+    <div>
+        <input type="number" id="id" placeholder="ID">
+        <input type="text" id="name" placeholder="NAME">
+        <input type="text" id="brand" placeholder="BRAND">
+        <input type="number" id="year" placeholder="YEAR">
+        <input type="text" id="description" placeholder="DESCRIPTION">
+        <!--input list="category_id" name="categorias" placeholder="CATEGORY ID"-->    
+        <select class="lista" id="select-category" placeholder="SELECT CATEGORY"></select>
+        
+    </div>
+    <div>
+        <button class="boton" onclick="consultarBicicletas()">Consultar</button>
+        <button class="boton" onclick="guardarBicicleta()">Guardar</button>
+        <button class="boton" onclick="editarBicicleta()">Actualizar</button>
+        <button class="boton" onclick="eliminarBicicleta()">Eliminar</button>
+    </div>
+    <div class="operaciones" id="resultado"></div>
+</section>
+
+<section>
+    <div>
+        <h1>Para las operaciones de actualizar o eliminar, debe ingresar el ID del registro.</h1>
+      </div>
+</section>
+
+</body>
+
+
+</html>
